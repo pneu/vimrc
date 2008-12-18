@@ -1,14 +1,14 @@
-shell�Ķ��ѿ���euc-jp,ü����ʸ�������ɤ�euc-jp
-git��ʸ�������ɤ�utf-8�äݤ���
-�ե����뼫�Τ�utf-8�ˤ���commit���ʤ���ʸ����������Τ�ʬ���롥
+shell環境変数はeuc-jp,端末の文字コードはeuc-jp
+gitの文字コードはutf-8っぽい．
+ファイル自体はutf-8にしてcommitしないと文字化けするのは分かる．
 
-euc-jp���ɤ߹���ǡ�utf-8�ǽ񤭽Ф�������
+euc-jpで読み込んで，utf-8で書き出したい．
 
-fenc��fencs�򿧡��Ѥ��Ƹ����ꡤ
+fencとfencsを色々変えて見たり，
 LANG=ja_JP.utf8 vim .vimrc
-�Ȥ���ä�����
-�ʤ�ʸ���������롥
+とかやったけど
+なんか文字化けする．
 
-��ɡ����nkf -E -w����Τ����������褯�狼��ʤ���
+結局，毎回nkf -E -wするのだろうか．よくわからない．
 
-���ʤߤˤ��Υե�����ϤۤȤ�ɥޥ���Х��ȤʤΤǡ�nkf -E -w���Ƥ롥
+ちなみにこのファイルはほとんどマルチバイトなので，nkf -E -wしてる．
