@@ -36,9 +36,9 @@ set nocindent
 "set list							"show visibly tab, end of line, wrap line...
 " 'set listchars' is setting for 'set list'
 set listchars=tab:>.,eol:$,trail:_,extends:\
-" Following two settings bring ���Ѥζ��� into sight
+" Following two settings bring Á´³Ñ¤Î¶õÇò into sight
 "highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
-"au BufRead,BufNew * match JpSpace /��/
+"au BufRead,BufNew * match JpSpace /¡¡/
 syntax enable						"enavle syntax highlighting
 set showmatch						"show matching brackets
 
@@ -125,7 +125,7 @@ au BufNewFile Makefile	0r ~/.vim/skel/skeleton.Makefile|normal! 11G$
 "" For dirtags(ctags) {{{2
 nn <silent>		.t			:!(cd %:p:h;ctags *.[ch])&<cr>
 nn <silent>		.x			:!(gcc -Wall -I$HOME/include %:p) 2>&1<cr>
-						"TODO tmpname()��Ȥä�clist��ɽ���Ǥ���褦�ˤ�����
+						"TODO tmpname()¤ò»È¤Ã¤Æclist¤ËÉ½¼¨¤Ç¤­¤ë¤è¤¦¤Ë¤·¤¿¤¤
 nn <silent>		.X			:!(g++ -Wall %:p) 2>&1<cr>
 
 "" For yankring.vim {{{2
@@ -170,8 +170,8 @@ no  <silent> g]         :FuzzyFinderTag! <C-r>=expand('<cword>')<CR><CR>
 "nn <silent> <C-e><C-e> :FuzzyFinderEditInfo<CR>
 
 
-" �ƥ���
+" ¥Æ¥¹¥È
 " END {{{1
 " vim: tw=0:sts=0:ts=4:sw=4:
 " vim: foldmethod=marker
-" vim: fenc=euc-jp:fencs=euc-jp,utf-8
+" vim: fenc=utf-8:fencs=utf-8,euc-jp

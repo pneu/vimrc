@@ -1,0 +1,12 @@
+shell環境変数はeuc-jp,端末の文字コードはeuc-jp
+gitの文字コードはutf-8っぽい．
+ファイル自体はutf-8にしてcommitしないと文字化けするのは分かる．
+
+euc-jpで読み込んで，utf-8で書き出したい．
+
+fencとfencsを色々変えて見たり，
+LANG=ja_JP.utf8 vim .vimrc
+とかやったけど
+なんか文字化けする．
+
+結局，毎回nkf -E -wするのだろうか．よくわからない．
