@@ -24,6 +24,8 @@
 
 if has('unix')
 	source /etc/vimrc
+elseif has('win32')
+	runtime custom/mainpc.vim
 endif
 
 filetype plugin on
@@ -94,6 +96,10 @@ command! -bang -bar -complete=file -nargs=? Sjis  Cp932<bang> <args>
 
 
 "" [Miscellaneous settings]
+"" Language/Locale/Ctype etc. {{{
+"language C
+
+"}}}
 "" Modeline {{{
 set modeline
 	"+ enable mode line.
@@ -431,8 +437,10 @@ command! -bang -bar -nargs=0 CDl cd<bang> %:h
 command! -bang -bar -nargs=0 CDL lcd<bang> %:h
 
 "}}}
-"" Copy to Clipboard {{{
+"" Copy/Paste to Clipboard {{{
 nnoremap <silent>	[Tag]y	"+y
+nnoremap <silent>	[Tag]p	"+p
+nnoremap <silent>	[Tag]P	"+P
 
 "}}}
 "" For ChangeLog {{{
